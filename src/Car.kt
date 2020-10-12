@@ -1,6 +1,16 @@
-class Car{
+/**
+ * 자동차 클래스 입니다.
+ * 뛰뛰빵빵 broooooooom
+ */
+
+open class Car{
     var color : String = ""
     var speed : Int = 0
+
+    /**
+     * 속도 올리는 메서드
+     * @param value: 증가시킬 속도
+     */
 
     companion object{ // 지역변수 사용 불가, 상수 선언부
         var carCount : Int = 0
@@ -26,7 +36,7 @@ class Car{
         this.speed = speed
     }
 
-    fun upSpeed(value : Int){
+    open fun upSpeed(value : Int){
         speed = speed + value
         if(speed >= MAXSPEED){
             speed = 200
